@@ -3,7 +3,7 @@
 }
 
 .bgimg {
-    background-image: url("pictures/background.jpg");
+    background-image: url("pictures/background6.jpg");
     background-attachment: fixed;
     overflow-x: auto;
     overflow-y: auto;
@@ -17,7 +17,7 @@
     text-align: center;
     padding: 20px 0px 20px 0px;
     margin: 0px 0px 0px 0px;
-    background-color: #1aa3ff;
+    background-color: #209cff;
     line-height: 100%;
     font-size: 20px;
     color: #f7f7f7;
