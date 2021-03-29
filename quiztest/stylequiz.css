@@ -45,3 +45,10 @@
     padding: 0px;
     margin: 5px 0px 5px 0px;
 }
+
+#correct,
+#false,
+#skip {
+    text-align: center;
+    font-size: 25px;
+}
