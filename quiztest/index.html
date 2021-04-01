@@ -15,7 +15,7 @@
     <script src="logic.js"></script>
 </head>
 
-<body class="bgimg">
+<body class="bgimg" onload="variablesquiz1">
     <div class="bildrechts">
         <img src="pictures/bortfeldwappen.jpg" width="124" height="139" alt="Image could not be loaded. Showing: Das Wappen von Bortfeld">
     </div>
@@ -44,8 +44,9 @@
     </div>
     <div class="article">
         <h3>Willkommen in Bortfeld</h3>
-        <div id="box">
+        <div id="box" onload="status">
             <div class="richtige">
+                <p id="r0"><b>0</b> Fragen von <b>10</b> richtig</p>
                 <p id="r1"><b>1</b> Frage von <b>10</b> richtig</p>
                 <p id="r2"><b>2</b> Fragen von <b>10</b> richtig</p>
                 <p id="r3"><b>3</b> Fragen von <b>10</b> richtig</p>
@@ -165,7 +166,18 @@
                 <button id=weiter>WEITER</button>
             </div>
             <div id="endscreen">
-
+                <p id=glückwunsch>Herzlichen Glückwunsch!</p>
+                <p id=p1>Sie haben 1 von 10 Fragen richtig beantwortet!</p>
+                <p id=p2>Sie haben 2 von 10 Fragen richtig beantwortet!</p>
+                <p id=p3>Sie haben 3 von 10 Fragen richtig beantwortet!</p>
+                <p id=p4>Sie haben 4 von 10 Fragen richtig beantwortet!</p>
+                <p id=p5>Sie haben 5 von 10 Fragen richtig beantwortet!</p>
+                <p id=p6>Sie haben 6 von 10 Fragen richtig beantwortet!</p>
+                <p id=p7>Sie haben 7 von 10 Fragen richtig beantwortet!</p>
+                <p id=p8>Sie haben 8 von 10 Fragen richtig beantwortet!</p>
+                <p id=p9>Sie haben 9 von 10 Fragen richtig beantwortet!</p>
+                <p id=p10>Sie haben 10 von 10 Fragen richtig beantwortet!</p>
+                <button id=playagain>Play again</button>
             </div>
         </div>
     </div>
