@@ -6,6 +6,7 @@ function variablesquiz1() {
 }
 
 function status(statusq1) {
+    //durch switch case ändern
     if (statusq1 === 1) {
         frage('frageq1');
     }
@@ -21,126 +22,36 @@ function status(statusq1) {
 function frage(frageq1) {
 
     //Boxfarbe
-    try {
-        document.getElementById('box').classList('boxnormal')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('box').classRemove('boxgreen')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('box').classRemove('boxyellow')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('box').classRemove('boxred')
-    } catch (error) {
-
-    }
+    document.getElementById('box').classList.add('boxnormal')
+    document.getElementById('box').classList.remove('boxgreen')
+    document.getElementById('box').classList.remove('boxyellow')
+    document.getElementById('box').classList.remove('boxred')
 
     //Einblenden benötigter Elemente
 
     //set class
-    try {
-        document.getElementById('f' + frageq1).classList('visible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('q' + frageq1).classList('visible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('af1' + frageq1).classList('visible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('af2' + frageq1).classList('visible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('ac' + frageq1).classList('visible')
-    } catch (error) {
-
-    }
-
-    try {
-        document.getElementById('af1' + frageq1).classList('enabledbutton')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('af2' + frageq1).classList('enabledbutton')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('ac' + frageq1).classList('enabledbutton')
-    } catch (error) {
-
-    }
+    document.getElementById('f' + frageq1).classList.add('visible')
+    document.getElementById('q' + frageq1).classList.add('visible')
+    document.getElementById('af1' + frageq1).classList.add('visible')
+    document.getElementById('af2' + frageq1).classList.add('visible')
+    document.getElementById('ac' + frageq1).classList.add('visible')
+    document.getElementById('af1' + frageq1).classList.add('enabledbutton')
+    document.getElementById('af2' + frageq1).classList.add('enabledbutton')
+    document.getElementById('ac' + frageq1).classList.add('enabledbutton')
 
     //remove class
-    try {
-        document.getElementById('f' + frageq1).classRemove('nonvisible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('q' + frageq1).classRemove('nonvisible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('af1' + frageq1).classRemove('nonvisible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('af2' + frageq1).classRemove('nonvisible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('ac' + frageq1).classRemove('nonvisible')
-    } catch (error) {
-
-    }
-
-    try {
-        document.getElementById('af1' + frageq1).classRemove('disabledbutton')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('af2' + frageq1).classRemove('disabledbutton')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('ac' + frageq1).classRemove('disabledbutton')
-    } catch (error) {
-
-    }
+    document.getElementById('f' + frageq1).classList.remove('nonvisible')
+    document.getElementById('q' + frageq1).classList.remove('nonvisible')
+    document.getElementById('af1' + frageq1).classList.remove('nonvisible')
+    document.getElementById('af2' + frageq1).classList.remove('nonvisible')
+    document.getElementById('ac' + frageq1).classList.remove('nonvisible')
+    document.getElementById('af1' + frageq1).classList.remove('disabledbutton')
+    document.getElementById('af2' + frageq1).classList.remove('disabledbutton')
+    document.getElementById('ac' + frageq1).classList.remove('disabledbutton')
 
     //anderes
-    try {
-        document.getElementById('skipp').classList('visible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('skipp').classRemove('nonvisible')
-    } catch (error) {
-
-    }
+    document.getElementById('skipp').classList.add('visible')
+    document.getElementById('skipp').classList.remove('nonvisible')
 
     //Ausblenden anderer Elemente
     for (var i = 1; i <= 10; i++) {
@@ -148,127 +59,37 @@ function frage(frageq1) {
         if (i === frageq1) {
 
         } else {
-            try {
-                document.getElementById('f' + i).classList('nonvisible')
-            } catch (error) {
-
-            }
-            try {
-                document.getElementById('q' + i).classList('nonvisible')
-            } catch (error) {
-
-            }
-            try {
-                document.getElementById('af1' + i).classList('nonvisible')
-            } catch (error) {
-
-            }
-            try {
-                document.getElementById('af2' + i).classList('nonvisible')
-            } catch (error) {
-
-            }
-            try {
-                document.getElementById('ac' + i).classList('nonvisible')
-            } catch (error) {
-
-            }
-            try {
-                document.getElementById('e' + i).classList('nonvisible')
-            } catch (error) {
-
-            }
+            //set class
+            document.getElementById('f' + i).classList.add('nonvisible')
+            document.getElementById('q' + i).classList.add('nonvisible')
+            document.getElementById('af1' + i).classList.add('nonvisible')
+            document.getElementById('af2' + i).classList.add('nonvisible')
+            document.getElementById('ac' + i).classList.add('nonvisible')
+            document.getElementById('e' + i).classList.add('nonvisible')
 
             //remove class
-            try {
-                document.getElementById('f' + i).classRemove('visible')
-            } catch (error) {
+            document.getElementById('f' + i).classList.remove('visible')
+            document.getElementById('q' + i).classList.remove('visible')
+            document.getElementById('af1' + i).classList.remove('visible')
+            document.getElementById('af2' + i).classList.remove('visible')
+            document.getElementById('ac' + i).classList.remove('visible')
+            document.getElementById('e' + i).classList.remove('visible')
 
-            }
-            try {
-                document.getElementById('q' + i).classRemove('visible')
-            } catch (error) {
-
-            }
-            try {
-                document.getElementById('af1' + i).classRemove('visible')
-            } catch (error) {
-
-            }
-            try {
-                document.getElementById('af2' + i).classRemove('visible')
-            } catch (error) {
-
-            }
-            try {
-                document.getElementById('ac' + i).classRemove('visible')
-            } catch (error) {
-
-            }
-            try {
-                document.getElementById('e' + i).classRemove('visible')
-            } catch (error) {
-
-            }
         }
     }
-    try {
-        document.getElementById('correct').classList('nonvisible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('correct').classRemove('visible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('false').classList('nonvisible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('false').classRemove('visible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('skip').classList('nonvisible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('skip').classRemove('visible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('weiter').classList('nonvisible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('weiter').classRemove('visible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('endscreen').classList('nonvisible')
-    } catch (error) {
-
-    }
-    try {
-        document.getElementById('endscreen').classRemove('visible')
-    } catch (error) {
-
-    }
+    document.getElementById('correct').classList.add('nonvisible')
+    document.getElementById('correct').classList.remove('visible')
+    document.getElementById('false').classList.add('nonvisible')
+    document.getElementById('false').classList.remove('visible')
+    document.getElementById('skip').classList.add('nonvisible')
+    document.getElementById('skip').classList.remove('visible')
+    document.getElementById('weiter').classList.add('nonvisible')
+    document.getElementById('weiter').classList.remove('visible')
+    document.getElementById('endscreen').classList.add('nonvisible')
+    document.getElementById('endscreen').classList.remove('visible')
 
     //Andere Designtechnische Änderungen
-    try {
-        document.getElementById('ac' + frageq1).classRemove('correctbutton')
-    } catch (error) {
-
-    }
+    document.getElementById('ac' + frageq1).classList.remove('correctbutton')
 
     //Nächste Funktion
     richtige(richtigeq1)
