@@ -5,21 +5,21 @@ function variablesquiz1() {
     localStorage.setItem('frageq1', 1);
 }
 
-function status(statusq1) {
+function status() {
     //durch switch case ändern
-    if (statusq1 === 1) {
-        frage('frageq1');
+    if (localStorage.getItem('statusq1') == 1) {
+        frage();
     }
-    if (statusq1 === 2) {
-        antwort('frageq1');
+    if (localStorage.getItem('statusq1') == 2) {
+        antwort();
     }
-    if (statusq1 === 3) {
+    if (localStorage.getItem('statusq1') == 3) {
         endscreen();
     }
 
 }
 
-function frage(frageq1) {
+function frage() {
 
     //Boxfarbe
     document.getElementById('box').classList.add('boxnormal')
@@ -30,24 +30,24 @@ function frage(frageq1) {
     //Einblenden benötigter Elemente
 
     //set class
-    document.getElementById('f' + frageq1).classList.add('visible')
-    document.getElementById('q' + frageq1).classList.add('visible')
-    document.getElementById('af1' + frageq1).classList.add('visible')
-    document.getElementById('af2' + frageq1).classList.add('visible')
-    document.getElementById('ac' + frageq1).classList.add('visible')
-    document.getElementById('af1' + frageq1).classList.add('enabledbutton')
-    document.getElementById('af2' + frageq1).classList.add('enabledbutton')
-    document.getElementById('ac' + frageq1).classList.add('enabledbutton')
+    document.getElementById('f' + localStorage.getItem('frageq1')).classList.add('visible')
+    document.getElementById('q' + localStorage.getItem('frageq1')).classList.add('visible')
+    document.getElementById('af1' + localStorage.getItem('frageq1')).classList.add('visible')
+    document.getElementById('af2' + localStorage.getItem('frageq1')).classList.add('visible')
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('visible')
+    document.getElementById('af1' + localStorage.getItem('frageq1')).classList.add('enabledbutton')
+    document.getElementById('af2' + localStorage.getItem('frageq1')).classList.add('enabledbutton')
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('enabledbutton')
 
     //remove class
-    document.getElementById('f' + frageq1).classList.remove('nonvisible')
-    document.getElementById('q' + frageq1).classList.remove('nonvisible')
-    document.getElementById('af1' + frageq1).classList.remove('nonvisible')
-    document.getElementById('af2' + frageq1).classList.remove('nonvisible')
-    document.getElementById('ac' + frageq1).classList.remove('nonvisible')
-    document.getElementById('af1' + frageq1).classList.remove('disabledbutton')
-    document.getElementById('af2' + frageq1).classList.remove('disabledbutton')
-    document.getElementById('ac' + frageq1).classList.remove('disabledbutton')
+    document.getElementById('f' + localStorage.getItem('frageq1')).classList.remove('nonvisible')
+    document.getElementById('q' + localStorage.getItem('frageq1')).classList.remove('nonvisible')
+    document.getElementById('af1' + localStorage.getItem('frageq1')).classList.remove('nonvisible')
+    document.getElementById('af2' + localStorage.getItem('frageq1')).classList.remove('nonvisible')
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('nonvisible')
+    document.getElementById('af1' + localStorage.getItem('frageq1')).classList.remove('disabledbutton')
+    document.getElementById('af2' + localStorage.getItem('frageq1')).classList.remove('disabledbutton')
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('disabledbutton')
 
     //anderes
     document.getElementById('skipp').classList.add('visible')
@@ -56,7 +56,7 @@ function frage(frageq1) {
     //Ausblenden anderer Elemente
     for (var i = 1; i <= 10; i++) {
         //set class
-        if (i === frageq1) {
+        if (i == localStorage.getItem('frageq1')) {
 
         } else {
             //set class
@@ -89,8 +89,8 @@ function frage(frageq1) {
     document.getElementById('endscreen').classList.remove('visible')
 
     //Andere Designtechnische Änderungen
-    document.getElementById('ac' + frageq1).classList.remove('correctbutton')
+    document.getElementById('ac' + flocalStorage.getItem('frageq1')).classList.remove('correctbutton')
 
     //Nächste Funktion
-    richtige(richtigeq1)
+    richtige()
 }
