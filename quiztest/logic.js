@@ -2,14 +2,17 @@
 
 //variabeln festlegen
 function variablesquiz1() {
+    alert('Hallo Welt!');
     localStorage.setItem('richtigeq1', 0);
     localStorage.setItem('statusq1', 1);
     localStorage.setItem('frageq1', 1);
+    status();
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
 function status() {
+    alert('Hallo Welt!2');
     //durch switch case ändern
     if (localStorage.getItem('statusq1') == 1) {
         frage();
@@ -69,7 +72,8 @@ function frage() {
     for (var i = 1; i <= 10; i++) {
         //set class
         if (i == localStorage.getItem('frageq1')) {
-
+            document.getElementById('e' + i).classList.add('nonvisible');
+            document.getElementById('e' + i).classList.remove('visible');
         } else {
             //set class
             document.getElementById('f' + i).classList.add('nonvisible');
@@ -126,14 +130,17 @@ function antwortc() {
     document.getElementById('q' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('disabledbutton');
+    document.getElementById('e' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('correct').classList.add('visible');
     document.getElementById('weiter').classList.add('visible');
+
 
     //remove class
     document.getElementById('f' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('q' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('enabledbutton');
+    document.getElementById('e' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('correct').classList.remove('nonvisible');
     document.getElementById('weiter').classList.remove('nonvisible');
 
@@ -201,6 +208,7 @@ function antwortf() {
     document.getElementById('q' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('disabledbutton');
+    document.getElementById('e' + localStorage.getItem('frageq1')).classList.add('visible')
     document.getElementById('false').classList.add('visible');
     document.getElementById('weiter').classList.add('visible');
 
@@ -209,6 +217,7 @@ function antwortf() {
     document.getElementById('q' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('enabledbutton');
+    document.getElementById('e' + localStorage.getItem('frageq1')).classList.remove('nonvisible')
     document.getElementById('false').classList.remove('nonvisible');
     document.getElementById('weiter').classList.remove('nonvisible');
 
@@ -276,6 +285,7 @@ function antworts() {
     document.getElementById('q' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('disabledbutton');
+    document.getElementById('e' + localStorage.getItem('frageq1')).classList.add('visible')
     document.getElementById('skip').classList.add('visible');
     document.getElementById('weiter').classList.add('visible');
 
@@ -284,6 +294,7 @@ function antworts() {
     document.getElementById('q' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('enabledbutton');
+    document.getElementById('e' + localStorage.getItem('frageq1')).classList.remove('nonvisible')
     document.getElementById('skip').classList.remove('nonvisible');
     document.getElementById('weiter').classList.remove('nonvisible');
 
