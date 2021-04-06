@@ -1,9 +1,13 @@
+/*------------------------------------------------------------------------------------------------------------------------*/
+
 //variabeln festlegen
 function variablesquiz1() {
     localStorage.setItem('richtigeq1', 0);
     localStorage.setItem('statusq1', 1);
     localStorage.setItem('frageq1', 1);
 }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
 
 function status() {
     //durch switch case ändern
@@ -14,16 +18,18 @@ function status() {
         antwortc();
     }
     if (localStorage.getItem('statusq1') == 3) {
-        antwortc();
+        antwortf();
     }
     if (localStorage.getItem('statusq1') == 4) {
-        antwortc();
+        antworts();
     }
     if (localStorage.getItem('statusq1') == 0) {
         endscreen();
     }
 
 }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
 
 function frage() {
 
@@ -97,11 +103,13 @@ function frage() {
     document.getElementById('endscreen').classList.remove('visible');
 
     //Andere Designtechnische Änderungen
-    document.getElementById('ac' + flocalStorage.getItem('frageq1')).classList.remove('correctbutton');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('correctbutton');
 
     //Nächste Funktion
     richtige();
 }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
 
 function antwortc() {
 
@@ -128,10 +136,6 @@ function antwortc() {
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('enabledbutton');
     document.getElementById('correct').classList.remove('nonvisible');
     document.getElementById('weiter').classList.remove('nonvisible');
-
-    //anderes
-    document.getElementById('skipp').classList.add('visible');
-    document.getElementById('skipp').classList.remove('nonvisible');
 
     //Ausblenden anderer Elemente
     for (var i = 1; i <= 10; i++) {
@@ -168,15 +172,169 @@ function antwortc() {
     document.getElementById('false').classList.remove('visible');
     document.getElementById('skip').classList.add('nonvisible');
     document.getElementById('skip').classList.remove('visible');
+    document.getElementById('skipp').classList.add('nonvisible');
+    document.getElementById('skipp').classList.remove('visible');
     document.getElementById('endscreen').classList.add('nonvisible');
     document.getElementById('endscreen').classList.remove('visible');
 
     //Andere Designtechnische Änderungen
-    document.getElementById('ac' + flocalStorage.getItem('frageq1')).classList.remove('correctbutton');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('correctbutton');
 
     //Nächste Funktion
     richtige();
 }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+function antwortf() {
+
+    //Boxfarbe
+    document.getElementById('box').classList.add('boxred');
+    document.getElementById('box').classList.remove('boxnormal');
+    document.getElementById('box').classList.remove('boxyellow');
+    document.getElementById('box').classList.remove('boxgreen');
+
+    //Einblenden benötigter Elemente
+
+    //set class
+    document.getElementById('f' + localStorage.getItem('frageq1')).classList.add('visible');
+    document.getElementById('q' + localStorage.getItem('frageq1')).classList.add('visible');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('visible');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('disabledbutton');
+    document.getElementById('false').classList.add('visible');
+    document.getElementById('weiter').classList.add('visible');
+
+    //remove class
+    document.getElementById('f' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
+    document.getElementById('q' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('enabledbutton');
+    document.getElementById('false').classList.remove('nonvisible');
+    document.getElementById('weiter').classList.remove('nonvisible');
+
+    //Ausblenden anderer Elemente
+    for (var i = 1; i <= 10; i++) {
+        //set class
+        if (i == localStorage.getItem('frageq1')) {
+            document.getElementById('af1' + i).classList.add('nonvisible');
+            document.getElementById('af2' + i).classList.add('nonvisible');
+            document.getElementById('af1' + i).classList.remove('visible');
+            document.getElementById('af2' + i).classList.remove('visible');
+
+        } else {
+            //set class
+            document.getElementById('f' + i).classList.add('nonvisible');
+            document.getElementById('q' + i).classList.add('nonvisible');
+            document.getElementById('af1' + i).classList.add('nonvisible');
+            document.getElementById('af2' + i).classList.add('nonvisible');
+            document.getElementById('ac' + i).classList.add('nonvisible');
+            document.getElementById('e' + i).classList.add('nonvisible');
+            document.getElementById('p' + i).classList.add('nonvisible');
+
+            //remove class
+            document.getElementById('f' + i).classList.remove('visible');
+            document.getElementById('q' + i).classList.remove('visible');
+            document.getElementById('af1' + i).classList.remove('visible');
+            document.getElementById('af2' + i).classList.remove('visible');
+            document.getElementById('ac' + i).classList.remove('visible');
+            document.getElementById('e' + i).classList.remove('visible');
+            document.getElementById('p' + i).classList.remove('visible');
+
+        }
+    }
+
+    document.getElementById('correct').classList.add('nonvisible');
+    document.getElementById('correct').classList.remove('visible');
+    document.getElementById('skip').classList.add('nonvisible');
+    document.getElementById('skip').classList.remove('visible');
+    document.getElementById('skipp').classList.add('nonvisible');
+    document.getElementById('skipp').classList.remove('visible');
+    document.getElementById('endscreen').classList.add('nonvisible');
+    document.getElementById('endscreen').classList.remove('visible');
+
+    //Andere Designtechnische Änderungen
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('correctbutton');
+
+    //Nächste Funktion
+    richtige();
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+function antworts() {
+
+    //Boxfarbe
+    document.getElementById('box').classList.add('boxyellow');
+    document.getElementById('box').classList.remove('boxnormal');
+    document.getElementById('box').classList.remove('boxred');
+    document.getElementById('box').classList.remove('boxgreen');
+
+    //Einblenden benötigter Elemente
+
+    //set class
+    document.getElementById('f' + localStorage.getItem('frageq1')).classList.add('visible');
+    document.getElementById('q' + localStorage.getItem('frageq1')).classList.add('visible');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('visible');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('disabledbutton');
+    document.getElementById('skip').classList.add('visible');
+    document.getElementById('weiter').classList.add('visible');
+
+    //remove class
+    document.getElementById('f' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
+    document.getElementById('q' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('enabledbutton');
+    document.getElementById('skip').classList.remove('nonvisible');
+    document.getElementById('weiter').classList.remove('nonvisible');
+
+    //Ausblenden anderer Elemente
+    for (var i = 1; i <= 10; i++) {
+        //set class
+        if (i == localStorage.getItem('frageq1')) {
+            document.getElementById('af1' + i).classList.add('nonvisible');
+            document.getElementById('af2' + i).classList.add('nonvisible');
+            document.getElementById('af1' + i).classList.remove('visible');
+            document.getElementById('af2' + i).classList.remove('visible');
+
+        } else {
+            //set class
+            document.getElementById('f' + i).classList.add('nonvisible');
+            document.getElementById('q' + i).classList.add('nonvisible');
+            document.getElementById('af1' + i).classList.add('nonvisible');
+            document.getElementById('af2' + i).classList.add('nonvisible');
+            document.getElementById('ac' + i).classList.add('nonvisible');
+            document.getElementById('e' + i).classList.add('nonvisible');
+            document.getElementById('p' + i).classList.add('nonvisible');
+
+            //remove class
+            document.getElementById('f' + i).classList.remove('visible');
+            document.getElementById('q' + i).classList.remove('visible');
+            document.getElementById('af1' + i).classList.remove('visible');
+            document.getElementById('af2' + i).classList.remove('visible');
+            document.getElementById('ac' + i).classList.remove('visible');
+            document.getElementById('e' + i).classList.remove('visible');
+            document.getElementById('p' + i).classList.remove('visible');
+
+        }
+    }
+
+    document.getElementById('correct').classList.add('nonvisible');
+    document.getElementById('correct').classList.remove('visible');
+    document.getElementById('false').classList.add('nonvisible');
+    document.getElementById('false').classList.remove('visible');
+    document.getElementById('skipp').classList.add('nonvisible');
+    document.getElementById('skipp').classList.remove('visible');
+    document.getElementById('endscreen').classList.add('nonvisible');
+    document.getElementById('endscreen').classList.remove('visible');
+
+    //Andere Designtechnische Änderungen
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('correctbutton');
+
+    //Nächste Funktion
+    richtige();
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
 
 function richtige() {
     for (var i = 1; i <= 10; i++) {
@@ -197,6 +355,8 @@ function richtige() {
 
     }
 }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
 
 function endscreen() {
 
@@ -242,11 +402,13 @@ function endscreen() {
     document.getElementById('skipp').classList.remove('visible');
 
     //Andere Designtechnische Änderungen
-    document.getElementById('ac' + flocalStorage.getItem('frageq1')).classList.remove('correctbutton');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('correctbutton');
 
     //Nächste Funktion
     richtigeendsreen();
 }
+
+/*------------------------------------------------------------------------------------------------------------------------*/
 
 function richtigeendsreen() {
     for (var i = 1; i <= 10; i++) {
