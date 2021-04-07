@@ -118,3 +118,7 @@ li {
 .impressumabsatz {
     margin: 5px 0px 5px 0px;
 }
+
+.invisible {
+    display: none;
+}
