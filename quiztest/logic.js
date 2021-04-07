@@ -464,7 +464,7 @@ function buttonskipp() {
 //Buttons im Antwort Screen
 function buttonweiter() {
     localStorage.setItem('frageq1', parseInt(localStorage.getItem('frageq1')) + 1);
-    if (localStorage.getItem('frage1') == 11) {
+    if (localStorage.getItem('frageq1') == 11) {
         localStorage.setItem('statusq1', 0);
     } else {
         localStorage.setItem('statusq1', 1);
