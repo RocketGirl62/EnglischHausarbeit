@@ -14,9 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <script src="logic.js"></script>
     <script src="cookies.js"></script>
+    <script src="content.js"></script>
 </head>
 
-<body class="bgimg" onload="starting();cookieproove();status()">
+<body class="bgimg" onload="starting();cookieproove();status();cookieproovecontent();dreieckset()">
     <div class="bildrechts">
         <img src="pictures/bortfeldwappen.jpg" width="124" height="139" alt="Image could not be loaded. Showing: Das Wappen von Bortfeld">
     </div>
@@ -30,14 +31,14 @@
     <div class="content">
         <p><a href="index.html">Startseite</a></p>
         <p><a href="globalisierung.html">Globalisierung: Was ist das?</a></p>
-        <input id="dreieckr" type="image" src="pictures/dreieckrechts.png" width="15" height="15" alt="Button">
-        <input id="dreiecku" type="image" src="pictures/dreieckunten.png" width="15" height="15" alt="Button">
-        <p><a href="post.html">Post</a></p>
+        <input id="dreieckr" type="image" onclick="dreiecksetstatus1()" src="pictures/dreieckrechts.png" width="15" height="15" alt="Button">
+        <input id="dreiecku" type="image" onclick="dreiecksetstatus0()" src="pictures/dreieckunten.png" width="15" height="15" alt="Button">
+        <p class="plusunterthemen"><a href="post.html">Post</a></p>
         <div id="unterpunkte">
-            <p>hi</p>
-            <p>hi</p>
-            <p>hi</p>
-            <p>hi</p>
+            <p class="unterthema">hi</p>
+            <p class="unterthema">hi</p>
+            <p class="unterthema">hi</p>
+            <p class="unterthema">hi</p>
         </div>
         <p><a href="telefon.html">Telefonie</a></p>
         <p><a href="funk.html">Rundfunk und Fernsehen</a></p>

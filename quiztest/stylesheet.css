@@ -160,3 +160,17 @@ li {
     background-color: #00cc00;
     color: #f7f7f7;
 }
+
+#dreieckr,
+#dreiecku {
+    float: left;
+    padding: 2px 5px 2px 5px;
+}
+
+.unterthema {
+    margin: 2px 0px 2px 20px;
+}
+
+.plusunterthemen {
+    margin: 20px 0px 0px 0px;
+}
