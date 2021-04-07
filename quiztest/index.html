@@ -89,45 +89,45 @@
             </div>
             <div class="answers">
 
-                <button id="af11"><b>A</b> Antwort</button>
-                <button id="ac1"><b>B</b> Antwort</button>
-                <button id="af21"><b>C</b> Antwort</button>
+                <button id="af11" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="ac1" onclick="buttoncorrect()" disabled="false"><b>B</b> Antwort</button>
+                <button id="af21" onclick="buttonfalse()"><b>C</b> Antwort</button>
 
-                <button id="ac2"><b>A</b> Antwort</button>
-                <button id="af12"><b>B</b> Antwort</button>
-                <button id="af22"><b>C</b> Antwort</button>
+                <button id="ac2" onclick="buttoncorrect()" disabled="false"><b>A</b> Antwort</button>
+                <button id="af12" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="af22" onclick="buttonfalse()"><b>C</b> Antwort</button>
 
-                <button id="af13"><b>A</b> Antwort</button>
-                <button id="ac3"><b>B</b> Antwort</button>
-                <button id="af23"><b>C</b> Antwort</button>
+                <button id="af13" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="ac3" onclick="buttoncorrect()" disabled="false"><b>B</b> Antwort</button>
+                <button id="af23" onclick="buttonfalse()"><b>C</b> Antwort</button>
 
-                <button id="af14"><b>A</b> Antwort</button>
-                <button id="af24"><b>B</b> Antwort</button>
-                <button id="ac4"><b>C</b> Antwort</button>
+                <button id="af14" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="af24" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="ac4" onclick="buttoncorrect()" disabled="false"><b>C</b> Antwort</button>
 
-                <button id="af15"><b>A</b> Antwort</button>
-                <button id="af25"><b>B</b> Antwort</button>
-                <button id="ac5"><b>C</b> Antwort</button>
+                <button id="af15" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="af25" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="ac5" onclick="buttoncorrect()" disabled="false"><b>C</b> Antwort</button>
 
-                <button id="ac6"><b>A</b> Antwort</button>
-                <button id="af16"><b>B</b> Antwort</button>
-                <button id="af26"><b>C</b> Antwort</button>
+                <button id="ac6" onclick="buttoncorrect()" disabled="false"><b>A</b> Antwort</button>
+                <button id="af16" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="af26" onclick="buttonfalse()"><b>C</b> Antwort</button>
 
-                <button id="af17"><b>A</b> Antwort</button>
-                <button id="af27"><b>B</b> Antwort</button>
-                <button id="ac7"><b>C</b> Antwort</button>
+                <button id="af17" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="af27" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="ac7" onclick="buttoncorrect()" disabled="false"><b>C</b> Antwort</button>
 
-                <button id="af18"><b>A</b> Antwort</button>
-                <button id="ac8"><b>B</b> Antwort</button>
-                <button id="af28"><b>C</b> Antwort</button>
+                <button id="af18" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="ac8" onclick="buttoncorrect()" disabled="false"><b>B</b> Antwort</button>
+                <button id="af28" onclick="buttonfalse()"><b>C</b> Antwort</button>
 
-                <button id="ac9"><b>A</b> Antwort</button>
-                <button id="af19"><b>B</b> Antwort</button>
-                <button id="af29"><b>C</b> Antwort</button>
+                <button id="ac9" onclick="buttoncorrect()" disabled="false"><b>A</b> Antwort</button>
+                <button id="af19" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="af29" onclick="buttonfalse()"><b>C</b> Antwort</button>
 
-                <button id="ac10"><b>A</b> Antwort</button>
-                <button id="af110"><b>B</b> Antwort</button>
-                <button id="af210"><b>C</b> Antwort</button>
+                <button id="ac10" onclick="buttoncorrect()" disabled="false"><b>A</b> Antwort</button>
+                <button id="af110" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="af210" onclick="buttonfalse()"><b>C</b> Antwort</button>
             </div>
             <div class=explanation>
                 <div id=e1>
@@ -162,8 +162,8 @@
                 </div>
             </div>
             <div class=quizbuttons>
-                <button id=skipp>SKIP</button>
-                <button id=weiter>WEITER</button>
+                <button id=skipp onclick="buttonskipp()">SKIP</button>
+                <button id=weiter onclick="buttonweiter()">WEITER</button>
             </div>
             <div id="endscreen">
                 <p id=glückwunsch>Herzlichen Glückwunsch!</p>
@@ -177,7 +177,7 @@
                 <p id=p8>Sie haben 8 von 10 Fragen richtig beantwortet!</p>
                 <p id=p9>Sie haben 9 von 10 Fragen richtig beantwortet!</p>
                 <p id=p10>Sie haben 10 von 10 Fragen richtig beantwortet!</p>
-                <button id=playagain>Play again</button>
+                <button id=playagain onclick="buttonplayagain()">Play again</button>
             </div>
         </div>
     </div>

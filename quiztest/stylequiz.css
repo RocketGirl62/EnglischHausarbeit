@@ -228,10 +228,6 @@
 
 /*Buttons enabeln und disabeln*/
 
-.disabledbutton {
-    cursor: not-allowed;
-}
-
 .enabledbutton {
     border: 2px solid #000066;
     background-color: #82e2fc;
@@ -245,6 +241,7 @@
 .correctbutton {
     border: 2px solid #00b300;
     background-color: #13ec13;
+    color: black;
 }
 
 

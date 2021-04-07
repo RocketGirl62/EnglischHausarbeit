@@ -2,7 +2,6 @@
 
 //variabeln festlegen
 function variablesquiz1() {
-    alert('Hallo Welt!');
     localStorage.setItem('richtigeq1', 0);
     localStorage.setItem('statusq1', 1);
     localStorage.setItem('frageq1', 1);
@@ -11,8 +10,9 @@ function variablesquiz1() {
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
+//Styles ändern
+
 function status() {
-    alert('Hallo Welt!2');
     //durch switch case ändern
     if (localStorage.getItem('statusq1') == 1) {
         frage();
@@ -60,9 +60,8 @@ function frage() {
     document.getElementById('af1' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('af2' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('nonvisible');
-    document.getElementById('af1' + localStorage.getItem('frageq1')).classList.remove('disabledbutton');
-    document.getElementById('af2' + localStorage.getItem('frageq1')).classList.remove('disabledbutton');
-    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('disabledbutton');
+
+    document.getElementById('ac' + localStorage.getItem('frageq1')).disabled = false;
 
     //anderes
     document.getElementById('skipp').classList.add('visible');
@@ -129,7 +128,7 @@ function antwortc() {
     document.getElementById('f' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('q' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('visible');
-    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('disabledbutton');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).disabled = true;
     document.getElementById('e' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('correct').classList.add('visible');
     document.getElementById('weiter').classList.add('visible');
@@ -207,7 +206,7 @@ function antwortf() {
     document.getElementById('f' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('q' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('visible');
-    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('disabledbutton');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).disabled = true;
     document.getElementById('e' + localStorage.getItem('frageq1')).classList.add('visible')
     document.getElementById('false').classList.add('visible');
     document.getElementById('weiter').classList.add('visible');
@@ -284,7 +283,7 @@ function antworts() {
     document.getElementById('f' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('q' + localStorage.getItem('frageq1')).classList.add('visible');
     document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('visible');
-    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.add('disabledbutton');
+    document.getElementById('ac' + localStorage.getItem('frageq1')).disabled = true;
     document.getElementById('e' + localStorage.getItem('frageq1')).classList.add('visible')
     document.getElementById('skip').classList.add('visible');
     document.getElementById('weiter').classList.add('visible');
@@ -348,7 +347,7 @@ function antworts() {
 /*------------------------------------------------------------------------------------------------------------------------*/
 
 function richtige() {
-    for (var i = 1; i <= 10; i++) {
+    for (var i = 0; i <= 10; i++) {
         if (i == localStorage.getItem('richtigeq1')) {
             //set class
             document.getElementById('r' + i).classList.add('visible');
@@ -422,7 +421,7 @@ function endscreen() {
 /*------------------------------------------------------------------------------------------------------------------------*/
 
 function richtigeendsreen() {
-    for (var i = 1; i <= 10; i++) {
+    for (var i = 0; i <= 10; i++) {
         if (i == localStorage.getItem('richtigeq1')) {
             //set class
             document.getElementById('p' + i).classList.add('visible');
@@ -439,4 +438,40 @@ function richtigeendsreen() {
         }
 
     }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+//Methoden für die Buttons
+
+//Buttons im Frage Screen
+function buttoncorrect() {
+    localStorage.setItem('richtigeq1', parseInt(localStorage.getItem('richtigeq1')) + 1);
+    localStorage.setItem('statusq1', 2);
+    status();
+}
+
+function buttonfalse() {
+    localStorage.setItem('statusq1', 3);
+    status();
+}
+
+function buttonskipp() {
+    localStorage.setItem('statusq1', 4);
+    status();
+}
+
+//Buttons im Antwort Screen
+function buttonweiter() {
+    localStorage.setItem('frageq1', parseInt(localStorage.getItem('frageq1')) + 1);
+    localStorage.setItem('statusq1', 1);
+    status();
+}
+
+//Buttons im Endscreeen
+function buttonplayagain() {
+    localStorage.setItem('richtigeq1', 0);
+    localStorage.setItem('statusq1', 1);
+    localStorage.setItem('frageq1', 1);
+    status();
 }
