@@ -113,41 +113,6 @@
     transition-duration: 0.4s;
 }
 
-
-/*#ac1:hover,
-#ac2:hover,
-#ac3:hover,
-#ac4:hover,
-#ac5:hover,
-#ac6:hover,
-#ac7:hover,
-#ac8:hover,
-#ac9:hover,
-#ac10:hover,
-#af11:hover,
-#af12:hover,
-#af13:hover,
-#af14:hover,
-#af15:hover,
-#af16:hover,
-#af17:hover,
-#af18:hover,
-#af19:hover,
-#af110:hover,
-#af21:hover,
-#af22:hover,
-#af23:hover,
-#af24:hover,
-#af25:hover,
-#af26:hover,
-#af27:hover,
-#af28:hover,
-#af29:hover,
-#af210:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    background-color: #06c4f9;
-}*/
-
 #e1,
 #e2,
 #e3,
@@ -184,6 +149,7 @@
     text-align: center;
 }
 
+#p0,
 #p1,
 #p2,
 #p3,

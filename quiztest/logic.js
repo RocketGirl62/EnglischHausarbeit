@@ -27,7 +27,7 @@ function status() {
         antworts();
     }
     if (localStorage.getItem('statusq1') == 0) {
-        endscreen();
+        functionendscreen();
     }
 
 }
@@ -368,8 +368,8 @@ function richtige() {
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
-function endscreen() {
-
+function functionendscreen() {
+    alert('Endscreen2');
     //Boxfarbe
     document.getElementById('box').classList.add('boxnormal');
     document.getElementById('box').classList.remove('boxgreen');
@@ -400,6 +400,9 @@ function endscreen() {
         document.getElementById('e' + i).classList.remove('visible');
         document.getElementById('r' + i).classList.remove('visible');
     }
+    document.getElementById('r0').classList.add('nonvisible');
+    document.getElementById('r0').classList.remove('visible');
+
     document.getElementById('correct').classList.add('nonvisible');
     document.getElementById('correct').classList.remove('visible');
     document.getElementById('false').classList.add('nonvisible');
@@ -411,16 +414,16 @@ function endscreen() {
     document.getElementById('skipp').classList.add('nonvisible');
     document.getElementById('skipp').classList.remove('visible');
 
-    //Andere Designtechnische Änderungen
-    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('correctbutton');
+    /*Andere Designtechnische Änderungen
+    document.getElementById('ac' + localStorage.getItem('frageq1')).classList.remove('correctbutton');*/
 
     //Nächste Funktion
-    richtigeendsreen();
+    richtigeendscreen();
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
-function richtigeendsreen() {
+function richtigeendscreen() {
     for (var i = 0; i <= 10; i++) {
         if (i == localStorage.getItem('richtigeq1')) {
             //set class
@@ -465,6 +468,7 @@ function buttonskipp() {
 function buttonweiter() {
     localStorage.setItem('frageq1', parseInt(localStorage.getItem('frageq1')) + 1);
     if (localStorage.getItem('frageq1') == 11) {
+        alert('Endscreen');
         localStorage.setItem('statusq1', 0);
     } else {
         localStorage.setItem('statusq1', 1);
