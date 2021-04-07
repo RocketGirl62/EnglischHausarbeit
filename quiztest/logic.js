@@ -1,11 +1,18 @@
 /*------------------------------------------------------------------------------------------------------------------------*/
+//überprüfen ob variablen zurückgesetzt werden müssen
+function cookieproove() {
+    if (localStorage.getItem('cookieallowed') != 1) {
+        variablesquiz1();
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
 
 //variabeln festlegen
 function variablesquiz1() {
     localStorage.setItem('richtigeq1', 0);
     localStorage.setItem('statusq1', 1);
     localStorage.setItem('frageq1', 1);
-    status();
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -478,8 +485,6 @@ function buttonweiter() {
 
 //Buttons im Endscreeen
 function buttonplayagain() {
-    localStorage.setItem('richtigeq1', 0);
-    localStorage.setItem('statusq1', 1);
-    localStorage.setItem('frageq1', 1);
+    variablesquiz1();
     status();
 }

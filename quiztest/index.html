@@ -13,9 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <script src="logic.js"></script>
+    <script src="cookies.js"></script>
 </head>
 
-<body class="bgimg" onload="variablesquiz1()">
+<body class="bgimg" onload="starting();cookieproove();status()">
     <div class="bildrechts">
         <img src="pictures/bortfeldwappen.jpg" width="124" height="139" alt="Image could not be loaded. Showing: Das Wappen von Bortfeld">
     </div>
@@ -29,7 +30,15 @@
     <div class="content">
         <p><a href="index.html">Startseite</a></p>
         <p><a href="globalisierung.html">Globalisierung: Was ist das?</a></p>
+        <input id="dreieckr" type="image" src="pictures/dreieckrechts.png" width="15" height="15" alt="Button">
+        <input id="dreiecku" type="image" src="pictures/dreieckunten.png" width="15" height="15" alt="Button">
         <p><a href="post.html">Post</a></p>
+        <div id="unterpunkte">
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+        </div>
         <p><a href="telefon.html">Telefonie</a></p>
         <p><a href="funk.html">Rundfunk und Fernsehen</a></p>
         <p><a href="internet.html">Internet</a></p>
@@ -37,8 +46,6 @@
         <p><a href="bank.html">Bankautomat</a></p>
         <p><a href="autohaus.html">Das Autohaus Opitz</a></p>
         <p><a href="np.html">Supermarkt &mdash; NP</a></p>
-        <input id="dreieckr" type="image" src="pictures/dreieckrechts.png" width="15" height="15" alt="Button">
-        <input id="dreiecku" type="image" src="pictures/dreieckunten.png" width="15" height="15" alt="Button">
     </div>
     <div class="schmuckbild1">
         <img src="pictures/schmuckglobalisierung.jpg" width="290" height="270" alt="Bild konnte nicht geladen werden. Zu sehen: Weltkugel mit leuchtendem Gloablisierungsnetz" />
@@ -183,6 +190,12 @@
                 <button id=playagain onclick="buttonplayagain()">Play again</button>
             </div>
         </div>
+    </div>
+    <div id="cookieconsent">
+        <h4 id="cookieheading">I like Cookies!</h4>
+        <p id="cookietext">We use Cookies to make our website work. With the use of this website you allow Cookies.
+        </p>
+        <button id="cookiebutton" onclick="allowed();variablesquiz1()">Accept!</button>
     </div>
     <footer>
         <div class="bottom">
