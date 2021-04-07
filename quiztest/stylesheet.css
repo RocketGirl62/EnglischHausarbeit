@@ -122,3 +122,41 @@ li {
 .invisible {
     display: none;
 }
+
+#cookieconsent {
+    width: 20%;
+    background-color: #333333;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 10px 10px 10px;
+    font-family: inherit;
+    color: #f7f7f7;
+}
+
+#cookieheading {
+    font-size: 28px;
+    margin: 10px 20px 10px 20px;
+}
+
+#cookietext {
+    font-size: 20px;
+    margin: 10px 20px 10px 20px;
+}
+
+#cookiebutton {
+    padding: 5px 20px 5px 20px;
+    margin: 10px 20px 10px 20px;
+    transition-duration: 0.4s;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 0;
+    font-family: inherit;
+    color: #333333;
+    font-size: 20px;
+}
+
+#cookiebutton:hover {
+    background-color: #00cc00;
+    color: #f7f7f7;
+}
