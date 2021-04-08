@@ -115,6 +115,10 @@ li {
     margin: 20px 0px 0px 0px;
 }
 
+.pdfdownloadicon {
+    text-decoration: none;
+}
+
 .impressumabsatz {
     margin: 5px 0px 5px 0px;
 }
