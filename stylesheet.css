@@ -17,7 +17,7 @@
     text-align: center;
     padding: 20px 0px 20px 0px;
     margin: 0px 0px 0px 0px;
-    background-color: #209cff;
+    background-color: #000066;
     line-height: 100%;
     font-size: 20px;
     color: #f7f7f7;
@@ -26,6 +26,7 @@
 .bildrechts {
     float: right;
     margin: 10px 25px 0px 10px;
+    background-color: #f7f7f7;
 }
 
 .bildlinks {
@@ -45,7 +46,7 @@ h2 {
 }
 
 .articlepicture {
-    /*padding: 0px 20% 0px 20%;*/
+    padding: 0px 20% 0px 20%;
 }
 
 p {
@@ -115,6 +116,66 @@ li {
     margin: 20px 0px 0px 0px;
 }
 
+.pdfdownloadicon {
+    text-decoration: none;
+}
+
 .impressumabsatz {
     margin: 5px 0px 5px 0px;
+}
+
+.invisible {
+    display: none;
+}
+
+#cookieconsent {
+    width: 20%;
+    background-color: #333333;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 10px 10px 10px;
+    font-family: inherit;
+    color: #f7f7f7;
+}
+
+#cookieheading {
+    font-size: 28px;
+    margin: 10px 20px 10px 20px;
+}
+
+#cookietext {
+    font-size: 20px;
+    margin: 10px 20px 10px 20px;
+}
+
+#cookiebutton {
+    padding: 5px 20px 5px 20px;
+    margin: 10px 20px 10px 20px;
+    transition-duration: 0.4s;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 0;
+    font-family: inherit;
+    color: #333333;
+    font-size: 20px;
+}
+
+#cookiebutton:hover {
+    background-color: #00cc00;
+    color: #f7f7f7;
+}
+
+#dreieckr,
+#dreiecku {
+    float: left;
+    padding: 2px 5px 2px 5px;
+}
+
+.unterthema {
+    margin: 2px 0px 2px 20px;
+}
+
+.plusunterthemen {
+    margin: 20px 0px 0px 0px;
 }
