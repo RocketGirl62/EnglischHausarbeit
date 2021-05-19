@@ -3,7 +3,7 @@
 }
 
 .bgimg {
-    background-image: url("pictures/background6.jpg");
+    background-image: url("pictures/background.jpg");
     background-attachment: fixed;
     overflow-x: auto;
     overflow-y: auto;
@@ -47,6 +47,10 @@ h2 {
 
 .articlepicture {
     padding: 0px 20% 0px 20%;
+}
+
+.articlepicture2 {
+    padding: 0px 5% 0px 5%;
 }
 
 p {
@@ -118,6 +122,10 @@ li {
 
 .pdfdownloadicon {
     text-decoration: none;
+}
+
+.pdfdownloadintroduction {
+    margin: 10px 0px 5px 0px;
 }
 
 .impressumabsatz {
