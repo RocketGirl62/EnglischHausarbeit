@@ -180,10 +180,42 @@ li {
     padding: 2px 5px 2px 5px;
 }
 
+#dreieckr2,
+#dreiecku2 {
+    float: left;
+    padding: 2px 5px 2px 5px;
+}
+
 .unterthema {
     margin: 2px 0px 2px 20px;
 }
 
 .plusunterthemen {
     margin: 20px 0px 0px 0px;
+}
+
+.merkebox {
+    border: 3px solid #00ffff;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.merkeheading {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.merketext {
+    font-family: 'Amatic SC', cursive;
+}
+
+.abstand {
+    color: #f7f7f7;
+    font-size: 10px;
+    padding: 0;
+    margin: 5px 5px 5px 5px;
+}
+
+.plusunterthemen2 {
+    margin: 0px 0px 0px 0px;
 }
