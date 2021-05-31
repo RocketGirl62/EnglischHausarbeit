@@ -199,14 +199,21 @@ li {
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
     margin: 20px 0px 20px 0px;
+    background-color: #e6ffff;
 }
 
 .merkeheading {
     font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+    font-size: 32px;
+    padding: 0px;
+    margin: 0;
 }
 
 .merketext {
     font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+    margin: 5px 0px 5px;
 }
 
 .abstand {
