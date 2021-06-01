@@ -12,12 +12,18 @@
     <meta name="description" content="This website is about the topics racism ans microaggressions." />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <script src="logic.js"></script>
     <script src="cookies.js"></script>
     <script src="content.js"></script>
+    <script src="logic2.js"></script>
+    <script src="content2.js"></script>
 </head>
 
-<body class="bgimg" onload="starting();cookieproove();cookieproovecontent();dreieckset()">
+<body class="bgimg" onload="starting();cookieproove();cookieproovecontent();dreieckset();cookieproove2();cookieproovecontent2();dreieckset2()">
     <div class="bildrechts">
         <img src="pictures/racism.png" width="280" height="140" alt="Image could not be loaded. Showing: Stop Racism">
     </div>
@@ -34,7 +40,7 @@
         <input id="dreiecku" type="image" onclick="dreiecksetstatus0()" src="pictures/dreieckunten.png" width="15" height="15" alt="Button">
         <p class="plusunterthemen"><a href="racismhomepage.html">Racism</a></p>
         <div id="unterpunkte">
-            <p class="unterthema"><a href="whatisracism.html">What is racism?</a></p>
+            <p class="unterthema"><a href="racismhomepage.html#whatisracism">What is racism?</a></p>
             <p class="unterthema"><a href="wherecanyoufindracism.html">Where can you find racism?</a></p>
             <p class="unterthema"><a href="formsofracism.html">Forms of racism</a></p>
             <p class="unterthema"><a href="racisminthepast.html">Racism in the past</a></p>
@@ -42,14 +48,19 @@
             <p class="unterthema"><a href="quizracism.html">Quiz about racism</a></p>
             <p class="unterthema"><a href="summaryracism.html">Racism summary</a></p>
         </div>
-        <p><a href="microaggressionshomepage.html">Microaggressions</a></p>
-        <p><a href="whataremicroaggressions.html">What are microaggressions?</a></p>
-        <p><a href="whataremicroaggressions.html#microassults">Microassults</a></p>
-        <p><a href="whataremicroaggressions.html#microinsults">Microinsults</a></p>
-        <p><a href="whataremicroaggressions.html#microinvalidations">Microinvalidations</a></p>
-        <p><a href="againstmicroaggressions.html">What can we do against microaggressions and where do we find them?</a></p>
-        <p><a href="quizmicroaggressions.html">Quiz about microaggressions</a></p>
-        <p><a href="summarymicroaggressions.html">Microaggressions summary</a></p>
+        <p class="abstand">distance</p>
+        <input id="dreieckr2" type="image" onclick="dreiecksetstatus12()" src="pictures/dreieckrechts.png" width="15" height="15" alt="Button">
+        <input id="dreiecku2" type="image" onclick="dreiecksetstatus02()" src="pictures/dreieckunten.png" width="15" height="15" alt="Button">
+        <p class="plusunterthemen2"><a href="microaggressionshomepage.html">Microaggressions</a></p>
+        <div id="unterpunkte2">
+            <p class="unterthema"><a href="whataremicroaggressions.html">What are microaggressions?</a></p>
+            <p class="unterthema"><a href="whataremicroaggressions.html#microassults">Microassults</a></p>
+            <p class="unterthema"><a href="whataremicroaggressions.html#microinsults">Microinsults</a></p>
+            <p class="unterthema"><a href="whataremicroaggressions.html#microinvalidations">Microinvalidations</a></p>
+            <p class="unterthema"><a href="againstmicroaggressions.html">What can we do against microaggressions and where do we find them?</a></p>
+            <p class="unterthema"><a href="quizmicroaggressions.html">Quiz about microaggressions</a></p>
+            <p class="unterthema"><a href="summarymicroaggressions.html">Microaggressions summary</a></p>
+        </div>
         <p><a href="novel.html">Novel: The color game</a></p>
     </div>
     <div class="schmuckbild1">
@@ -57,36 +68,14 @@
         <img class="schmuckbild2" src="pictures/wordcloudracism.jpg" width="290" height="290" alt="Image could not be loaded. Showing: A wordcloud about racism and microaggressions" />
     </div>
     <div class="article">
-        <h3>Homepage</h3>
-        <p>Racism and Microaggressions are huge topics in today´s society. Especially Racism is a topic many people are talking about. Just think about Black Lives Matter.</p>
-        <p>Do you know what Microaggressions are? Probably you wont even heard of them. But that´s also a big issue not many really know about in our society. But it´s especially important to talk about them and to raise awareness to do something against
-            this.
-        </p>
-        <h4 class="liste">If you´d like to know more about it, you can see our topics here:</h4>
-        <ul>
-            <li><a href="racismhomepage.html">Racism</a></li>
-            <ul>
-                <li><a href="whatisracism.html">What is racism?</a></li>
-                <li><a href="wherecanyoufindracism.html">Where can you find racism?</a></li>
-                <li><a href="formsofracism.html">Forms of racism</a></li>
-                <li><a href="racisminthepast.html">Racism in the past</a></li>
-                <li><a href="againstracism.html">What can we do against racism?</a></li>
-                <li><a href="quizracism.html">Quiz about racism</a></li>
-                <li><a href="summaryracism.html">Racism summary</a></li>
-            </ul>
-            <li><a href="microaggressionshomepage.html">Microaggressions</a></li>
-            <ul>
-                <li><a href="whataremicroaggressions.html">What are microaggressions?</a></li>
-                <li><a href="whataremicroaggressions.html#microassults">Microassults</a></li>
-                <li><a href="whataremicroaggressions.html#microinsults">Microinsults</a></li>
-                <li><a href="whataremicroaggressions.html#microinvalidations">Microinvalidations</a></li>
-                <li><a href="againstmicroaggressions.html">What can we do against microaggressions and where do we find them?</a></li>
-                <li><a href="quizmicroaggressions.html">Quiz about microaggressions</a></li>
-                <li><a href="summarymicroaggressions.html">Microaggressions summary</a></li>
-            </ul>
-            <li><a href="novel.html">Novel: The color game</a></li>
-        </ul>
-        <img class="articlepicture2" src="pictures/stop-racism.jpg" width="800" height="450" alt="Image could not be loaded. Showing: Stop racsism" </div>
+        <h3>Forms of racism</h3>
+        <p>You can find racism everywhere and this means that there are also different kinds of racism.</p>
+        <p>Of course, there is direct racism. This means the person directly says what he or she thinks with all insults. This kind of racism hurts those affected more than indirect ones. If someone says something directly you know that that person really means what he or she says. It still can be unintentionally, but mostly it isn’t.</p>
+        <p>That’s very different for another form of racism: indirect racism. These are mostly Microaggressions. If you don’t know what they are you can look here. Indirect racism has the problem that you don’t know the intention of the person. But most of the times it’s intended to hurt the person. To minimize the comments that aren’t intended to be racist or to hurt anyone we need to raise awareness.</p>
+        <div class="merkebox">
+            <h4 class="merkeheading">Remember:</h4>
+            <p class="merketext">Both, direct and indirect racism are hurting people. But the huge problem with indirect racism is, that it´s more subtle and difficult to find out which intention the person has. The most popular form of indirect racism are so-called microaggressions.</p>
+        </div>
     </div>
     <footer>
         <div class="bottom">
