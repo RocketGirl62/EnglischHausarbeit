@@ -22,7 +22,7 @@
     <script src="content2.js"></script>
 </head>
 
-<body class="bgimg" onload="starting();cookieproove();cookieproovecontent();dreieckset();cookieproovecontent2();dreieckset2()">
+<body class="bgimg" onload="starting();cookieproove();cookieproovecontent();dreieckset();cookieproovecontent2();dreieckset2();status()">
     <div class="bildrechts">
         <img src="pictures/racism.png" width="280" height="140" alt="Image could not be loaded. Showing: Stop Racism">
     </div>
@@ -60,7 +60,8 @@
             <p class="unterthema"><a href="quizmicroaggressions.html">Quiz about microaggressions</a></p>
             <p class="unterthema"><a href="summarymicroaggressions.html">Microaggressions summary</a></p>
         </div>
-        <p><a href="novel.html">Novel: The color game</a></p>
+        <p><a href="novel.html">Novel: The War between the Classes</a></p>
+        <p><a href="game.html">Game: Gems of Knowledge</a></p>
     </div>
     <div class="schmuckbild1">
         <img src="pictures/worldhands.png" width="290" height="290" alt="Image could not be loaded. Showing: Hands of different color over a world" />
@@ -68,7 +69,7 @@
     </div>
     <div class="article">
         <h3>Quiz</h3>
-        <p>This is a quiz about racism. Here you can check if you know everything necessary about racism.</p>
+        <p>This is a quiz about racism. Here you can check if you know everything necessary about racism and recive the first part of the password for the <a href="game.html">Game</a>. The seccond part you'll recive <a href="quizmicroaggressions.html">here</a>.</p>
         <div id="box">
             <div class="richtige">
                 <p id="r0"><b>0</b> questions of <b>10</b> right</p>
@@ -188,10 +189,10 @@
             </div>
             <div class=quizbuttons>
                 <button id=skipp onclick="buttonskipp()">SKIP</button>
-                <button id=weiter onclick="buttonweiter()"><CONTINUE></button>
+                <button id=weiter onclick="buttonweiter()">CONTINUE</button>
             </div>
             <div id="endscreen">
-                <p id=glückwunsch>Herzlichen Glückwunsch!</p>
+                <p id=glückwunsch>Congratulations!</p>
                 <p id=p0>You've answered 0 of 10 questions right!</p>
                 <p id=p1>You've answered 1 of 10 questions right!</p>
                 <p id=p2>You've answered 2 of 10 questions right!</p>
@@ -202,7 +203,11 @@
                 <p id=p7>You've answered 7 of 10 questions right!</p>
                 <p id=p8>You've answered 8 of 10 questions right!</p>
                 <p id=p9>You've answered 9 of 10 questions right!</p>
-                <p id=p10>You've answered 10 of 10 questions right!</p>
+                <div id=p10>
+                    <p>You've answered 10 of 10 questions right!</p>
+                    <p>This is the first part of the password to unlock the game:</p>
+                    <p>STOP_Raci</p>
+                </div>
                 <button id=playagain onclick="buttonplayagain()">Play again</button>
             </div>
         </div>

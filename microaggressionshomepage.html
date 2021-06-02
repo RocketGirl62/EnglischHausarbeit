@@ -12,12 +12,18 @@
     <meta name="description" content="This website is about the topics racism ans microaggressions." />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <script src="logic.js"></script>
     <script src="cookies.js"></script>
     <script src="content.js"></script>
+    <script src="logic2.js"></script>
+    <script src="content2.js"></script>
 </head>
 
-<body class="bgimg" onload="starting();cookieproove();cookieproovecontent();dreieckset()">
+<body class="bgimg" onload="starting();cookieproove();cookieproovecontent();dreieckset();cookieproove2();cookieproovecontent2();dreieckset2()">
     <div class="bildrechts">
         <img src="pictures/racism.png" width="280" height="140" alt="Image could not be loaded. Showing: Stop Racism">
     </div>
@@ -34,7 +40,7 @@
         <input id="dreiecku" type="image" onclick="dreiecksetstatus0()" src="pictures/dreieckunten.png" width="15" height="15" alt="Button">
         <p class="plusunterthemen"><a href="racismhomepage.html">Racism</a></p>
         <div id="unterpunkte">
-            <p class="unterthema"><a href="whatisracism.html">What is racism?</a></p>
+            <p class="unterthema"><a href="racismhomepage.html#whatisracism">What is racism?</a></p>
             <p class="unterthema"><a href="wherecanyoufindracism.html">Where can you find racism?</a></p>
             <p class="unterthema"><a href="formsofracism.html">Forms of racism</a></p>
             <p class="unterthema"><a href="racisminthepast.html">Racism in the past</a></p>
@@ -42,15 +48,21 @@
             <p class="unterthema"><a href="quizracism.html">Quiz about racism</a></p>
             <p class="unterthema"><a href="summaryracism.html">Racism summary</a></p>
         </div>
-        <p><a href="microaggressionshomepage.html">Microaggressions</a></p>
-        <p><a href="whataremicroaggressions.html">What are microaggressions?</a></p>
-        <p><a href="whataremicroaggressions.html#microassults">Microassults</a></p>
-        <p><a href="whataremicroaggressions.html#microinsults">Microinsults</a></p>
-        <p><a href="whataremicroaggressions.html#microinvalidations">Microinvalidations</a></p>
-        <p><a href="againstmicroaggressions.html">What can we do against microaggressions and where do we find them?</a></p>
-        <p><a href="quizmicroaggressions.html">Quiz about microaggressions</a></p>
-        <p><a href="summarymicroaggressions.html">Microaggressions summary</a></p>
-        <p><a href="novel.html">Novel: The color game</a></p>
+        <p class="abstand">distance</p>
+        <input id="dreieckr2" type="image" onclick="dreiecksetstatus12()" src="pictures/dreieckrechts.png" width="15" height="15" alt="Button">
+        <input id="dreiecku2" type="image" onclick="dreiecksetstatus02()" src="pictures/dreieckunten.png" width="15" height="15" alt="Button">
+        <p class="plusunterthemen2"><a href="microaggressionshomepage.html">Microaggressions</a></p>
+        <div id="unterpunkte2">
+            <p class="unterthema"><a href="whataremicroaggressions.html">What are microaggressions?</a></p>
+            <p class="unterthema"><a href="whataremicroaggressions.html#microassults">Microassults</a></p>
+            <p class="unterthema"><a href="whataremicroaggressions.html#microinsults">Microinsults</a></p>
+            <p class="unterthema"><a href="whataremicroaggressions.html#microinvalidations">Microinvalidations</a></p>
+            <p class="unterthema"><a href="againstmicroaggressions.html">What can we do against microaggressions and where do we find them?</a></p>
+            <p class="unterthema"><a href="quizmicroaggressions.html">Quiz about microaggressions</a></p>
+            <p class="unterthema"><a href="summarymicroaggressions.html">Microaggressions summary</a></p>
+        </div>
+        <p><a href="novel.html">Novel: The War between the Classes</a></p>
+        <p><a href="game.html">Game: Gems of Knowledge</a></p>
     </div>
     <div class="schmuckbild1">
         <img src="pictures/worldhands.png" width="290" height="290" alt="Image could not be loaded. Showing: Hands of different color over a world" />
@@ -58,9 +70,8 @@
     </div>
     <div class="article">
         <h3>Microaggressions</h3>
-        <P>Probably you won´t have every heard of Microaggressions and don´t know what they are like most of the people. Therefore we’re going to explain it to you.</P>
-        <p>Microaggressions are a term of socio-psychological, which was shaped from Chester Pierce, to describe little insulting comments in normal live. It includes short derogatorily comments which refer to affiliation of a different group. The fundamental
-            idea is from the psychologist Derald Wing Sue from the Columbia University he did the most scientific work on this topic.</p>
+        <P>Probably you won´t have ever heard of microaggressions and, like most people, don´t know what they are and how they hurt other people. Therefore, we are going to explain it to you. Being aware on microaggressions is an important prerequisite to
+            avoid them. Surely, you have already observed microaggressions. Maybe you also have used them by yourself, but without intending to hurt someone. With the following articles we would like to sensibilize you on this subject.</p>
         <h4 clas="liste">Our topics about microaggressions:</h4>
         <ul>
             <li><a href="whataremicroaggressions.html">What are microaggressions?</a></li>
@@ -71,6 +82,8 @@
             <li><a href="quizmicroaggressions.html">Quiz about microaggressions</a></li>
             <li><a href="summarymicroaggressions.html">Microaggressions summary</a></li>
         </ul>
+        <h4>Tip:</h4>
+        <p class="impressumabsatz">On each page you´ll find a box with the most important information in the article and at the end of each topic you´ll find all of the boxes and a document for downloading them in PDF format.</p>
     </div>
     <footer>
         <div class="bottom">
